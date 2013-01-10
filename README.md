@@ -2,11 +2,11 @@
 
 RecMeApp recommends venues by analyzing your Foursquare checkins. 
 
-This was built for TechCrunch Disrupt hackathon 2012. [Presentation video.](http://video.aoljobs.com/recme-demo-517474034)
+This was built for the TechCrunch Disrupt hackathon 2012. Check out the [Presentation video.](http://video.aoljobs.com/recme-demo-517474034)
 
 ## How it works
 
-1. Get check-in's from 4sq
+1. Get checkins from 4sq
 2. Use Factual's crosswalk api to get from 4sq venue id -> factual venue id
 3. Use factual venue id to look up similar venues using Locu
 4. Do some filtering and processing on the results
@@ -30,7 +30,7 @@ factual.secretkey=
 locu.apikey=
 ```
 
-Then `[RecMeApp] $ play run` to start the server
+Then `[RecMeApp]$ play run` to start the server
 
 ## Deploying
 
