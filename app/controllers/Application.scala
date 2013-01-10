@@ -121,6 +121,10 @@ object Application extends Controller {
     }
   }
 
+  def show = Action {
+    Ok(html.locu("507bb21ee4b03d49e5dadaf1", ""))
+  }
+
   def foursquareAuth = Action {
       // First we need to redirect our user to authentication page.
     Redirect(foursquare().getAuthenticationUrl())
@@ -159,8 +163,13 @@ object Application extends Controller {
   }
 
   def locuSearch(name: String, postalCode: String): Promise[Option[String]] = {
-    val _url = LocuUrlBase.format("search") + "&name=" + URLEncoder.encode(name, "UTF-8") + "&postal_code=" + postalCode
-    WS.url(_url).get().map { r => Option(r.json \\ "id") flatMap { _.headOption } map { _.as[String] } }
+    // Only allow postal codes in the US, XXX not a fool proof check
+    if (Option(postalCode).exists { p => p forall Character.isDigit} && postalCode.length == 5) {
+      val _url = LocuUrlBase.format("search") + "&name=" + URLEncoder.encode(name, "UTF-8") + "&postal_code=" + postalCode
+      WS.url(_url).get().map { r => Option(r.json \\ "id") flatMap { _.headOption } map { _.as[String] } }
+    } else {
+      Promise.pure(None)
+    }
   }
 
   def home = Action { implicit request =>
