@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js'></script>
+    <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB5CDbnyzZOfpXGKeWuMfvIjDGmY-Er5Jc&sensor=true">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+      $.getJSON('http://api.v3.factual.com/t/restaurants-us?q=peets+coffee&filters={"region":"CA","locality":"san francisco"}&KEY=p7kwKMFUSyVi64FxnqWmeSDEI41kzE3vNWmwY9Zi', function(d) {
+      var myLatLong = new google.maps.LatLng(d.response.data[0].latitude,d.response.data[0].longitude);
+      console.log(d.response.data[0].latitude+" -- "+d.response.data[0].longitude);
+      
+      var mapOptions = {
+      center: myLatLong,
+      zoom: 8,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById("map_canvas"),
+      mapOptions);
+      var marker = new google.maps.Marker({
+      position: myLatLong,
+      map: map,
+      title:"Hello World!"
+      });
+      
+      }); // End callback
+
+
+      
+      }
+    </script>
+    
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas" style="width:100%; height:50%"></div>
+  </body>
+</html>
+

@@ -1,0 +1,69 @@
+@(title: String)(javascripts: Html = Html.empty)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>@title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap/bootstrap.min.css")" />
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/font-awesome.min.css")" />
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap/responsive.min.css")" />
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")" />
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/jquery.fancybox.css")" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="@routes.Assets.at("ico/favicon.ico")">
+  </head>
+
+  <body>
+
+<div class="container-fluid">
+  <div class="container">
+
+    @content
+
+  </div> <!-- /container -->
+</div><!--/.fluid-container-->
+
+<div class="row">
+  <footer class="footer">
+   Built by <a href="http://twitter.com/hjzhu"> Justin Zhu </a> and <a href="http://twitter.com/andrewboni"> Andrew Boni </a>
+   <br>
+   <br>
+
+  <a href="http://locu.com"><img height="25" width="155" src="http://locu.com/static/images/dev/poweredby-white@@2x.png" alt="Powered by Locu" /></a>
+  </footer>
+</div>
+
+
+<!-- Le javascript
+     ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")"></script>
+<script src="@routes.Assets.at("javascripts/jdi1ebj.js")"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+<script src="@routes.Assets.at("javascripts/bootstrap-transition.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap-alert.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap-modal.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap-dropdown.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap-scrollspy.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap-tab.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap-tooltip.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap-popover.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap-button.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap-collapse.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap-carousel.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap-typeahead.js")"></script>
+@javascripts
+
+</body>
+</html>

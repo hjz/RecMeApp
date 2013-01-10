@@ -1,0 +1,60 @@
+# --- First database schema
+
+# --- !Ups
+
+set ignorecase true;
+
+create table items (
+  id                     bigint not null,
+  restaurant_id          bigint not null,
+  item_name              varchar(255) not null,
+  price                  double not null,
+  photo_url              varchar(255),
+  description     varchar(255),
+  category        varchar(255))
+;
+
+create table venues (
+  id                        bigint not null,
+  owner_id                  bigint not null,
+  name                      varchar(255) not null,
+  address                      varchar(255) not null,
+  city                      varchar(255) not null,
+  state                      varchar(255) not null,
+  zip                      int not null,
+  phone                      int not null,
+  hours                      varchar(255),
+  website                      varchar(255))
+;
+
+create table orders (
+  id                        bigint not null,
+  restaurant_id             bigint not null,
+  customer_id               bigint not null,
+  timestamp                 timestamp not null,
+  items                     varchar(255))
+;
+
+create table menus (
+  id                        bigint not null,
+  restaurant_id             bigint not null,
+  items                     varchar(255))
+;
+
+create table users (
+  id                        bigint not null auto_increment,
+  email                      varchar(255) not null,
+  first_name                      varchar(255) not null,
+  last_name                      varchar(255) not null,
+  is_owner boolean not null
+  )
+;
+
+
+# --- !Downs
+
+drop table if exists restaurant;
+drop table if exists items;
+drop table if exists menus;
+drop table if exists orders;
+drop table if exists customers;

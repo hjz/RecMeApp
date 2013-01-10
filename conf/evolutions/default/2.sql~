@@ -1,0 +1,20 @@
+# --- Sample dataset
+
+# --- !Ups
+
+insert into items (id, restaurant_id, item_name, price, photo_url, description, category) values (  1, 1, 'General Foos Chicken', 7.98, 'http://google.com', 'Foolicious', 'Chicken');
+
+insert into users (id, email, first_name, last_name, password, is_owner) values (
+1, 'j@z.com', 'Justin', 'Zhu', '$2a$10$TKY1egcxOkmUPtmcKpOspuhY9NMS3V8cNCBrLO3NTXWCIA.hlpm4y', true)
+
+insert into venues (id, restaurant_id, item_name, price, photo_url, description, category) values (  1, 1, 'General Foos Chicken', 7.98, 'http://google.com', 'Foolicious', 'Chicken');
+
+
+insert into venues (id, owner_id, name, address, city, state, zip, phone, hours, website) values (1, 1, 'Cock Bang', '1 Bullsac blvd', 'San Francisco', 'CA', 94110, 6501111111, '24/7', 'www.cockbang.xxx')
+
+# --- !Downs
+delete from items;
+delete from users;
+delete from menus;
+delete from venues;
+delete from orders;

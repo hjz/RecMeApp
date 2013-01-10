@@ -1,0 +1,276 @@
+/* Mobile */
+
+@media screen and (max-width: 650px) {
+
+  h1 {
+    font-size: 4em !important;
+  }
+
+}
+/* End mobile */
+
+
+.typekit-badge {display:none !important;}
+
+body {
+  background: url(/assets/images/assault.png);
+  background-repeat:repeat-y repeat-x;
+}
+
+
+h1, h2 {
+  color:#fff;
+  text-shadow: 1px 1px 2px #333;
+}
+
+p {
+  color:#fff;
+}
+hr {
+  border-top: 1px dotted #fff;
+  color: #fff;
+  height: 2px;
+  width:220px;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+ul li {
+
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 0 0 5px;
+    margin: 0 0 0 20px;
+}
+
+
+/* Begin login page */
+#login-box {
+  text-align: left;
+  margin-top: 150px;
+}
+#login-box .row {
+  margin-bottom: 50px;
+}
+
+/* End login page */
+
+
+/* Begin main page */
+
+#sign-up-home {
+
+}
+
+.sidebar-nav {
+  padding: 9px 0;
+}
+.hero-unit {
+ /* background-color:rgba(0,0,0,0.8);
+  border-radius:10px;
+  border: 1px #666666 solid;
+  -webkit-box-shadow: #000 0 2px 10px;
+  -moz-box-shadow: #000 0 2px 10px;:
+  BOX-shadow: #000 0 2px 10px;*/
+  color: white;
+  background-color: transparent !important;
+  margin-bottom: 500px;
+}
+
+.hero-unit h1 {
+    text-align: center;
+
+}
+
+.center_text {
+  margin:auto;
+  text-align: center;
+}
+
+.footer {
+  margin:auto;
+  text-align: center;
+  color:#fff;
+  text-shadow:1px 1px 1px #333;
+}
+.item {
+  text-align: justify;
+}
+.item h2 {
+  text-align: left;
+}
+.brand {
+  padding: 2px 20px 0 !important;
+}
+
+.why-selling-points {
+    background: url('/assets/images/stella.jpg') 20% 100%;
+    overflow: hidden;
+    background-size: 130%;
+    max-width: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #262626;
+
+}
+.why-selling-points p {
+    padding: 300px 20px 20px 20px;
+    text-shadow: 1px 1px 2px #333;
+}
+
+.black-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px;
+
+}
+
+.owner-selling-points {
+    background: url('/assets/images/chef.jpg') 20% 100%;
+    overflow: hidden;
+    background-size: 250%;
+    max-width: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #262626;
+}
+
+.owner-selling-points p {
+    padding: 300px 20px 20px 20px;
+    text-shadow: 1px 1px 2px #333;
+}
+
+.patron-selling-points {
+    background: url('/assets/images/patrons.jpg') 15% 0%;
+    overflow: hidden;
+    background-size: 190%;
+    max-width: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #262626;
+}
+.patron-selling-points p {
+
+    padding: 300px 20px 20px 20px;
+    text-shadow: 1px 1px 2px #333;
+}
+/* End main page */
+
+/* Begin stream page */
+
+
+
+/* End stream page */
+
+.stream-entry {
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 2px 2px 0;
+    box-shadow: 2px 2px 10px #262626;
+
+}
+
+.stream-entry img {
+    width: 50px;
+
+}
+
+.stream-text {
+    padding: 0 10px;
+}
+
+
+
+
+
+/* Begin menu page */
+
+#cover-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  box-shadow: 2px 2px 20px #262626;
+}
+
+#venue-header {
+ margin-top: -65px;
+ text-shadow: 1px 1px 3px #333;
+ padding: 0 0 5px 5px;
+}
+
+#menu {
+  font-size: 1em;
+  border-radius: 0 0 5px 5px;
+  background-color: rgba(0,0,0,0.6);
+  box-shadow: 2px 2px 20px #262626;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+#map2_sidebar {
+    color: #fff;
+}
+#menu a {
+    color: #fff;
+}
+#menu a:hover {
+  color: #8ABB69;
+  text-decoration: none;
+}
+#menu dt {
+  font-size: 1.2em;
+}
+#menu dt, dd {
+  padding:5px;
+}
+#menu h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.dl-horizontal dt {
+  width: 200px;
+}
+
+.icon-plus-sign {
+color:#8ABB69;
+}
+
+.icon-minus-sign {
+
+color: red;
+}
+
+/* End main page */
+
+
+/* Begin venue page */
+
+#map_canvas {
+    box-shadow: 2px 2px 10px #262626;
+}
+
+#streetview {
+    /* -webkit-filter: blur(2px) saturate(1.4); */
+    box-shadow: 2px 2px 10px #262626;
+    margin-top: 10px;
+    border-radius: 5px;
+    width:100%;
+    height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#venue-info {
+    padding: 20px;
+}
+#venue-info ul{
+    margin-left:-20px;
+}
+
+#venue-info ul li {
+   list-style-type:none;
+   color:#fff;
+}
+
+/* End venue page */

@@ -1,0 +1,20 @@
+@(listId: String, listUrl: String)
+
+@main_customjs("Recommended Venues") {
+<script type="text/javascript" src="@routes.Assets.at("javascripts/mapsensor.js")"></script>
+<script type="text/javascript" src="@routes.Assets.at("javascripts/api.min.js")"></script>
+
+    <script type="text/javascript">
+        foursqmap.lists('map2', '@listId', {'sidebar': 'map2_sidebar'});
+    </script>
+} {
+    <div>
+      <div id="map2_sidebar" style="width:300px; float:left; height: 500px; overflow: auto">
+    </div>
+    <div style="margin-left:300px;">
+    	<div id="map2" style="width: 100%;height: 500px"></div>
+    </div>
+    <a href="@listUrl" class="btn btn-primary btn-small">View on Foursquare</a>
+
+    </div>
+    }
